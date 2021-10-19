@@ -8,12 +8,13 @@ const Register = require('./controllers/Register');
 const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0; 
 
 const db = knex({
   // Enter your own database information here based on what you created
   client: 'pg',
   connection: {
-    host : '127.0.0.1',
+    host : 'postgresql-angular-86034',
     user : 'postgres',
     port :'5433',
     password : '',
